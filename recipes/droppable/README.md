@@ -17,7 +17,7 @@ We are going to take inspiration from this [example](http://jqueryui.com/droppab
 
 Prerequisite Recipes:
 
-* [draggable](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/draggable)
+* [draggable](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/draggable)
 
 #### Step 1: Create a new project
 

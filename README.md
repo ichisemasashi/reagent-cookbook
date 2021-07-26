@@ -2,84 +2,86 @@
 
 ![Reagent-Project](logo-rounded.jpg)
 
-The goal of this repo is to provide recipes for how to accomplish specific tasks in a [reagent](https://github.com/reagent-project/reagent) webapp.
+このリポジトリの目的は、[reagent](https://github.com/reagent-project/reagent)というウェブアプリで特定のタスクを実行する方法のレシピを提供することです。
 
-For updates, follow us on twitter: [@ReagentProject](https://twitter.com/ReagentProject). Please include `#reagent #cljs` when tweeting about reagent.
+最新情報については、twitterでフォローしてください。[@ReagentProject](https://twitter.com/ReagentProject). reagentについてつぶやくときは、`#reagent #cljs`を付けてください。
 
-For video tutorials, [subscribe](https://www.youtube.com/channel/UC1UP5LiNNNf0a45dA9eDA0Q) to us on youtube.
+ビデオチュートリアルについては、youtubeで[subscribe](https://www.youtube.com/channel/UC1UP5LiNNNf0a45dA9eDA0Q)してください。
 
 ## Basics
 
-* [Basic Component](https://github.com/reagent-project/reagent-cookbook/tree/master/basics/basic-component)
-* [Component-level State](https://github.com/reagent-project/reagent-cookbook/tree/master/basics/component-level-state)
-* [Cursors](https://github.com/reagent-project/reagent-cookbook/tree/master/basics/cursors)
+* [Basic Component](https://github.com/ichisemasashi/reagent-cookbook/tree/master/basics/basic-component)
+* [Component-level State](https://github.com/ichisemasashi/reagent-cookbook/tree/master/basics/component-level-state)
+* [Cursors](https://github.com/ichisemasashi/reagent-cookbook/tree/master/basics/cursors)
 
 ## Recipes
 
 * Animation
-    * [mojs animation](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/mojs-animation)
-    * [ReactCSSTransitionGroup](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/ReactCSSTransitionGroup)
+    * [mojs animation](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/mojs-animation)
+    * [ReactCSSTransitionGroup](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/ReactCSSTransitionGroup)
 * Bootstrap
-    * [bootstrap modal window](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/bootstrap-modal)
-    * [bootstrap-datepicker](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/bootstrap-datepicker)
+    * [bootstrap modal window](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/bootstrap-modal)
+    * [bootstrap-datepicker](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/bootstrap-datepicker)
 * Canvas
-    * [Canvas fills div](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/canvas-fills-div)
+    * [Canvas fills div](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/canvas-fills-div)
 * Charting
-    * [highcharts](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/highcharts)
-    * [morris](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/morris)
+    * [highcharts](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/highcharts)
+    * [morris](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/morris)
 * Images
-    * [google-street-view](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/google-street-view)
+    * [google-street-view](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/google-street-view)
 * jQuery UI
-    * [autocomplete](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/autocomplete)
-    * [draggable element](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/draggable)
-    * [droppable element](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/droppable)
-    * [sortable portlets](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/sortable-portlets)
+    * [autocomplete](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/autocomplete)
+    * [draggable element](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/draggable)
+    * [droppable element](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/droppable)
+    * [sortable portlets](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/sortable-portlets)
 * Maps
-    * [Leaflet](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/leaflet)
-    * [Google Maps](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/google-maps)
+    * [Leaflet](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/leaflet)
+    * [Google Maps](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/google-maps)
 * Misc.
-    * [compare argv](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/compare-argv)
-    * [Live Markdown Editor](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/markdown-editor)
-	* [server-side-rendering](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/reagent-server-rendering)
-	* [toggle class](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/toggle-class)
-	* [file upload with filestack](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/file-upload)
-	* [typeahead](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/typeaheadjs)
-	* [editable label](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/editable-label)
+    * [compare argv](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/compare-argv)
+    * [Live Markdown Editor](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/markdown-editor)
+	* [server-side-rendering](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/reagent-server-rendering)
+	* [toggle class](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/toggle-class)
+	* [file upload with filestack](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/file-upload)
+	* [typeahead](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/typeaheadjs)
+	* [editable label](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/editable-label)
 * Routing
-    * [add routing](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/add-routing) with secretary
+    * [add routing](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/add-routing) with secretary
 * Sidebar
-    * [Simple Sidebar](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/simple-sidebar)
+    * [Simple Sidebar](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/simple-sidebar)
 * State
-    * [local-storage](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/local-storage) with storage-atom
-    * [undo](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/undo) with historian
+    * [local-storage](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/local-storage) with storage-atom
+    * [undo](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/undo) with historian
 * Tables
-    * [DataTables](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/data-tables)
-	* [sortable table](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/sort-table)
-	* [filter table](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/filter-table)
+    * [DataTables](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/data-tables)
+	* [sortable table](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/sort-table)
+	* [filter table](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/filter-table)
 * Validation
-    * [input validation (color-coded)](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/input-validation)
+    * [input validation (color-coded)](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/input-validation)
 
-## Common Starting Point for Recipes
+## 一般的なレシピの出発点
 
-The starting point for reagent-cookbook recipes is [reagent-cookbook-template](https://github.com/gadfly361/reagent-cookbook-template).
+試薬料理(reagent-cookbook)のレシピの出発点は、[reagent-cookbook-template](https://github.com/gadfly361/reagent-cookbook-template)です。
 
 ```
 $ lein new rc <name of recipe>
 ```
 
-Note: reagent-cookbook-template was made specifically for following along with recipes.  If you are interested in starting a new reagent application with some batteries included, then [reagent-template](https://github.com/reagent-project/reagent-template) provides a good starting configuration: `$ lein new reagent <name of app>`.
+注：reagent-cookbook-templateは、特にレシピに沿って従うために作られました。 もしあなたが、いくつかのバッテリーを含んだ新しい試薬アプリケーションを始めることに興味があるなら、[reagent-template](https://github.com/reagent-project/reagent-template)が良いスタートの設定を提供してくれます: `$ lein new reagent <アプリの名前>`.
 
 ## Contributing
 
-Recipes are welcomed!  Please fork, branch, and submit a pull request.
+レシピは大歓迎です。 フォーク、ブランチ、そしてプルリクエストを提出してください。
 
-Also, I would love a PR for:
+また、以下のようなPRもお待ちしています。
 
-* Adding the right externs for advanced compilation of the *nvd3* recipe (it's inside old-recipes for now)
-* Adding the right externs for advanced compilation of the *mermaid* recipe (it's inside old-recipes for now)
+*nvd3* レシピの高度なコンパイルのための適切な externs の追加 (今のところ old-recipes の中にあります)
+*mermaid* レシピの高度なコンパイルのための正しい externs の追加 (これは今のところ old-recipes の中にあります)
 
 ## LICENSE
 
 Copyright © 2015 Matthew Jaoudi
 
 Distributed under the The MIT License (MIT).
+
+www.DeepL.com/Translator（無料版）で翻訳しました。

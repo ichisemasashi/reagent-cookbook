@@ -6,11 +6,11 @@ You want to add [cljs.test](https://github.com/clojure/clojurescript/blob/master
 
 *Steps*
 
-1. Follow all of the instructions in the [test-example](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/test-example) recipe.
+1. Follow all of the instructions in the [test-example](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/test-example) recipe.
 2. Add [test.check](https://github.com/clojure/test.check) to `project.clj` :dependencies vector
 3. Add a test that will use test.check's `defspec` macro
 
-#### Step 1: Follow all of the instructions in the [test-example](https://github.com/reagent-project/reagent-cookbook/tree/master/recipes/test-example) recipe.
+#### Step 1: Follow all of the instructions in the [test-example](https://github.com/ichisemasashi/reagent-cookbook/tree/master/recipes/test-example) recipe.
 
 #### Step 2: Add [test.check](https://github.com/clojure/test.check) to `project.clj` :dependencies vector
 

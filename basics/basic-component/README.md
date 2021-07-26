@@ -38,7 +38,7 @@ But wait, there is yet another way to create a reagent component with just a `re
     [:div "Hello, world!"]))
 ```
 
-In the end, `foo` `bar` and `baz` all produce the same reagent component! For more detail, please read [creating reagent components](https://github.com/reagent-project/reagent/blob/master/doc/CreatingReagentComponents.md).
+In the end, `foo` `bar` and `baz` all produce the same reagent component! For more detail, please read [creating reagent components](https://github.com/ichisemasashi/reagent/blob/master/doc/CreatingReagentComponents.md).
 
 ---
 
