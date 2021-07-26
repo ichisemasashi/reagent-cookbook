@@ -24,9 +24,9 @@
   [:div "Hello, world!"])
 ```
 
-Normally, you'd call a function by wrapping it in `( )`. However, reagent components, which produce html, are called by wrapping it in `[ ]` instead. When called, both `foo` and `bar` will invoke `React.createClass()` with the same render method defined. In other words, both `foo` and `bar` are effectively the same reagent component, and, when called, will produce the same html.
+通常、関数を呼び出すには、`( )`で囲みます。しかし，htmlを生成する試薬コンポーネントは，代わりに `[ ]` で包んで呼び出します．呼び出されると，`foo` と `bar` の両方が，同じ render メソッドを定義した `React.createClass()` を呼び出します．言い換えれば、`foo` と `bar` は実質的に同じ試薬コンポーネントであり、呼び出されると同じ html を生成することになります。
 
-But wait, there is yet another way to create a reagent component with just a `render` lifecycle method - a function returning a function that returns hiccup.
+しかし、待ってください、ただの `render` ライフサイクルメソッドで試薬コンポーネントを作成する別の方法があります - hiccup を返す関数です。
 
 ```clojure
 ;; Form-2 Component
@@ -35,17 +35,17 @@ But wait, there is yet another way to create a reagent component with just a `re
     [:div "Hello, world!"]))
 ```
 
-In the end, `foo` `bar` and `baz` all produce the same reagent component! For more detail, please read [creating reagent components](https://github.com/ichisemasashi/reagent/blob/master/doc/CreatingReagentComponents.md).
+結局、`foo`、`bar`、`baz`はすべて同じ試薬コンポーネントを生成することになります! 詳しくは、[試薬コンポーネントの作成](https://github.com/ichisemasashi/reagent/blob/master/doc/CreatingReagentComponents.md)をご覧ください。
 
 ---
 
-Let's create a project and try this out.
+プロジェクトを作成して試してみましょう。
 
 ```
 $ lein new rc basic-component
 ```
 
-Navigate to `src/cljs/basic_component/core.cljs` and make it look like this.
+`src/cljs/basic_component/core.cljs`に移動して、以下のようにします。
 
 ```clojure
 (ns basic-component.core
@@ -77,11 +77,11 @@ Navigate to `src/cljs/basic_component/core.cljs` and make it look like this.
                (.getElementById js/document "app")))
 ```
 
-Compile cljs files.
+cljsファイルをコンパイルします。
 
 ```
 $ lein clean
 $ lein cljsbuild once prod
 ```
 
-Open `resources/public/index.html`.
+`resources/public/index.html`を開きます。

@@ -1,15 +1,15 @@
 # Reagent Cursors
 
-In Reagent, it is a common pattern to create a single reagent atom (often called `app-state` or `app-db`) that contains all of your application's state.  [Cursors](https://github.com/reagent-project/reagent/blob/e53a5c2b1357c0560f0c4c15b28f00d09e27237b/src/reagent/core.cljs#L248) are an effective way to get a pointer inside a larger reagent atom, such as `app-state`.
+Reagentでは、アプリケーションのすべての状態を含む単一の試薬アトム(しばしば `app-state` または `app-db` と呼ばれる)を作成するのが一般的なパターンです。 [Cursors](https://github.com/reagent-project/reagent/blob/e53a5c2b1357c0560f0c4c15b28f00d09e27237b/src/reagent/core.cljs#L248)は、`app-state`のような、より大きな試薬アトムの中のポインターを得るための効果的な方法です。
 
-Let's start by making a reagent atom.
+まずは、試薬アトムを作ってみましょう。
 
 ```clojure
 (def app-state (reagent/atom {:foo {:bar "Hello, world!"
                                     :baz {:quux "Woot"}}}))
 ```
 
-To see what is inside `app-state` we could create a reagent component that dereferences the atom and converts it to a string.
+`app-state`の中を見るために、アトムを参照して文字列に変換する試薬コンポーネントを作ることができます。
 
 ```clojure
 (defn inside-app-state []
@@ -18,7 +18,7 @@ To see what is inside `app-state` we could create a reagent component that deref
 ;; Inside app-state: {:foo {:bar "Hello, world!", :baz {:quux "Woot"}}}
 ```
 
-Next, let's create a cursor and a reagent component to look inside.
+次に、カーソルと中を見るための試薬部品を作成してみましょう。
 
 ```clojure
 (def foo-cursor (reagent/cursor app-state [:foo]))
@@ -29,7 +29,7 @@ Next, let's create a cursor and a reagent component to look inside.
 ;; Inside foo-cursor: {:bar "Hello, world!", :baz {:quux "Woot"}}
 ```
 
-The `reagent/cursor` function takes a reagent atom and a path inside that reagent atom.  The path we provided was `[:foo]`. Notice how it is wrapped in `[ ]`, this is just a convenient way to traverse a nested map structure.  Let's make a few more cursors to understand this a little better.
+関数 `reagent/cursor` は，試薬アトムと，その試薬アトムの中のパスを受け取ります． ここで指定したパスは `[:foo]` です。これはネストしたマップ構造をトラバースするのに便利な方法なのです。 もう少し理解を深めるために、いくつかのカーソルを作ってみましょう。
 
 ```clojure
 (def foobar-cursor (reagent/cursor app-state [:foo :bar]))
@@ -56,17 +56,17 @@ The `reagent/cursor` function takes a reagent atom and a path inside that reagen
 ;; Inside foobazquux-cursor: Woot
 ```
 
-Take a look at the foobazquux-cursor, the path is `[:foo :baz :quux]` and we can see it will return "Woot".  If you look back at `app-state` you should have a sense of how this path thing works now.
+foobazquux-cursor を見てみましょう。パスは `[:foo :baz :quux]` で、"Woot" を返すことがわかります。 `app-state`を振り返ってみると、このパスがどのように機能しているかがわかると思います。
 
 ---
 
-Let's create a project and try this out.
+プロジェクトを作成して試してみましょう。
 
 ```
 $ lein new rc cursors
 ```
 
-Navigate to `src/cljs/cursors/core.cljs` and make it look like this.
+`src/cljs/cursors/core.cljs` に移動して、以下のようにします。
 
 ```clojure
 (ns cursors.core
@@ -112,11 +112,11 @@ Navigate to `src/cljs/cursors/core.cljs` and make it look like this.
                (.getElementById js/document "app")))
 ```
 
-Compile cljs files.
+cljsファイルをコンパイルします。
 
 ```
 $ lein clean
 $ lein cljsbuild once prod
 ```
 
-Open `resources/public/index.html`.
+`resources/public/index.html`を開きます。
