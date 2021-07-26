@@ -1,17 +1,14 @@
 # Creating a Basic Reagent Component
 
-First things first, what is a component? Let's look at the React.js [documentation](https://facebook.github.io/react/docs/component-specs.html).
+まず最初に、コンポーネントとは何か？React.jsの[documentation](https://facebook.github.io/react/docs/component-specs.html)を見てみましょう。
 
 ```
-When creating a component class by invoking `React.createClass()`,
-you should provide a specification object that contains a
-*render* method and can optionally contain other lifecycle methods
-described here.
+`React.createClass()`を呼び出してコンポーネントクラスを作成する際には、*render*メソッドを含むspecificationオブジェクトを提供する必要があり、オプションでここで説明する他のライフサイクルメソッドを含むことができます。
 ```
 
-Alright, so a component is created by using the `React.createClass()` method.  At a minimum, it requires a render function.  In [Reagent](https://github.com/reagent-project/reagent/), there is a wrapper for the `React.createClass()` method called `create-class`.  The `create-class` function takes a map of lifecycle methods (`:reagent-render`, `:component-will-mount`, `:component-did-mount`, etc.), see [here](https://github.com/reagent-project/reagent/blob/e53a5c2b1357c0560f0c4c15b28f00d09e27237b/src/reagent/core.cljs#L110).  *Note: (React.js calls it `render`, Reagent calls it `:reagent-render`)*
+さて，コンポーネントは，`React.createClass()`メソッドを使って作成されます． 最低でも、render関数が必要です。 [Reagent](https://github.com/reagent-project/reagent/)には、`React.createClass()`メソッドのラッパーとして、`create-class`というものがあります。 create-class`関数は、ライフサイクルメソッド(`:reagent-render`, `:component-will-mount`, `:component-did-mount`など)のマップを取ります。[こちら](https://github.com/reagent-project/reagent/blob/e53a5c2b1357c0560f0c4c15b28f00d09e27237b/src/reagent/core.cljs#L110)を参照してください。 *注：（React.jsでは「render」、Reagentでは「:reagent-render」と呼んでいます）*。
 
-So if we want to make a bare-bones component, we could do the following.
+つまり、素のコンポーネントを作りたい場合は、以下のようになります。
 
 ```clojure
 ;; Form-3 Component
@@ -19,7 +16,7 @@ So if we want to make a bare-bones component, we could do the following.
   (reagent/create-class {:reagent-render (fn [] [:div "Hello, world!"])}))
 ```
 
-However, creating a component that only defines the `:reagent-render` lifecycle method is very common. Reagent provides a shorthand for this - a function returning hiccup.
+しかし、`:reagent-render`というライフサイクルメソッドだけを定義したコンポーネントを作ることは、非常によくあることです。Reagentはこのためのショートハンド、つまりhiccupを返す関数を提供しています。
 
 ```clojure
 ;; Form-1 Component
