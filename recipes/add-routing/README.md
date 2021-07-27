@@ -1,20 +1,20 @@
-# Problem
+#  問題
 
-You want to add routing using [Secretary](https://github.com/gf3/secretary) to your [reagent](https://github.com/reagent-project/reagent) web application.
+Webアプリケーション[reagent](https://github.com/reagent-project/reagent)に、[Secretary](https://github.com/gf3/secretary)を使ったルーティングを追加したい。
 
-# Solution
+# 解決策
 
-*Steps*
+*ステップ
 
-1. Create a new project
-2. Add Secretary to `project.clj` :dependencies vector
-3. Add a reagent atom called `app-state`
-4. Add Secretary to `core.cljs` namespace
-5. Add browser history
-6. Create routes
-7. Create a `home` and `about` pages that link to each other
-8. Create a `current-page` multimethod that will return which page component to display based on `app-state`
-9. Update `main` to include `app-routes` and to render `current-page`
+1. 新しいプロジェクトを作成します。
+2. `project.clj` :dependencies vector に secretary を追加します。
+3. `app-state`という名前の試薬アトムを追加する
+4. secretary を `core.cljs` 名前空間に追加する。
+5. ブラウザの履歴を追加
+6. ルートの作成
+7. 相互にリンクする`home`と`about`ページの作成
+8. どのページコンポーネントを表示するかを `app-state` に基づいて返す `current-page` マルチメソッドを作成する。
+9. `main` を更新して、`app-routes` を含め、`current-page` をレンダリングする。
 
 #### Step 1: Create a new project
 

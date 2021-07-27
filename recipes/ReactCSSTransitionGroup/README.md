@@ -1,23 +1,23 @@
-# Problem
+#  問題
 
-You want to use [ReactCSSTransitionGroup](https://facebook.github.io/react/docs/animation.html) in your [reagent](https://github.com/reagent-project/reagent) web application.
+あなたの[reagent](https://github.com/reagent-project/reagent)ウェブアプリケーションで[ReactCSSTransitionGroup](https://facebook.github.io/react/docs/animation.html)を使用したい。
 
-(Note: This recipe is based on @jcreedcmu gist in this reagent [issue](https://github.com/reagent-project/reagent/issues/55).)
+(注: このレシピは、この試薬[issue](https://github.com/reagent-project/reagent/issues/55)の @jcreedcmu の gist に基づいています。)
 
-# Solution
+# 解決策
 
-In this example, we will be making a list of items that have an animated transition when they are created and removed.
+この例では、アイテムの作成と削除の際にアニメーションで遷移するアイテムのリストを作成することにします。
 
-*Steps*
+*ステップ*
 
-1. Create a new project
-2. Add react-with-addons to dependecies vector in `project.clj`
-3. Navigate to `src/cljs/animation/core.cljs` and adapt react's CSSTransitionGroup addon to reagent
-4. Create the style for your transition
-5. Create the initial app-state
-6. Create an `add-item` function
-7. Create a `delete-item` function
-8. Create a reagent component that can add items, delete items, and displays the items
+1. 新規プロジェクトの作成
+2. `project.clj`のdependecies vectorにreact-with-addonsを追加します。
+3. `src/cljs/animation/core.cljs` に移動して、reactのCSSTransitionGroupアドオンをreagentに適応させます。
+4. トランジションのためのスタイルを作成します。
+5. 初期のapp-stateを作成する
+6. `add-item`関数の作成
+7. `delete-item` 関数を作成する。
+8. アイテムを追加したり、削除したり、アイテムを表示したりできる試薬コンポーネントを作成する。
 
 #### Step 1: Create a new project
 
@@ -41,7 +41,7 @@ $ lein new rc animation
 
 #### Step 4: Create the style for your transition
 
-Notice that we are using `foo` as our transition name.
+遷移名に `foo` を使っていることに注目してください。
 
 ```clojure
 (def style
@@ -84,7 +84,7 @@ Notice that we are using `foo` as our transition name.
 
 #### Step 6: Create an `add-item` function
 
-We are doing two things here: 1) keeping track of the running total of items, and 2) adding the new item to the list of items stored in `app-state`.
+ここでは2つのことをしています。1) アイテムの合計を記録すること、2) `app-state` に格納されているアイテムのリストに新しいアイテムを追加することです。
 
 ```clojure
 (defn add-item []
@@ -95,7 +95,7 @@ We are doing two things here: 1) keeping track of the running total of items, an
 
 #### Step 7: Create a `delete-item` function
 
-Here we are are deleting the last item added to the list of items that are stored in `app-state`
+ここでは、`app-state`に格納されているアイテムのリストに追加された最後のアイテムを削除しています。
 
 ```clojure
 (defn delete-item []
@@ -105,7 +105,7 @@ Here we are are deleting the last item added to the list of items that are store
 
 #### Step 8: Create a reagent component that can add items, delete items, and displays the items
 
-Notice the use of the `css-transition-group` from step 3, and the use of the name `"foo"` from step 4.
+ステップ3では`css-transition-group`を使用し、ステップ4では`"foo"`という名前を使用していることに注目してください。
 
 ```clojure
 (defn home []
@@ -124,7 +124,7 @@ Notice the use of the `css-transition-group` from step 3, and the use of the nam
 
 # Usage
 
-Compile cljs files.
+cljsファイルをコンパイルします。
 
 ```
 $ lein clean

@@ -1,19 +1,19 @@
-# Problem
+#  問題
 
-You want to add [mo · js](https://github.com/legomushroom/mojs) animations to your [Reagent](https://github.com/reagent-project/reagent) web application.
+[mo - js](https://github.com/legomushroom/mojs)のアニメーションを[Reagent](https://github.com/reagent-project/reagent)のウェブアプリケーションに追加したい。
 
-# Solution
+# 解決策
 
-*Steps*
+*ステップ*
 
-1. Create a new project
-2. Add the `mo . js` library to `resources/public/vendor/js`
-3. Add necessary items to `resources/public/index.html`
-4. Add some css to `resources/public/css/animation.css`
-5. Add `animation-did-mount` function to render a Tween using the DOM node
-6. Add a `translate-y` function to update the node during animation
-7. Create an `animation` component that will render a `div` element
-8. Add externs in `project.clj` using the `mo . js` library
+1. 新しいプロジェクトを作成します。
+2. `mo .js`ライブラリを`resources/public/vendor/js`に追加する。
+3. 必要な項目を `resources/public/index.html` に追加する。
+4. cssを `resources/public/css/animation.css` に追加する。
+5. DOMノードを使ってTweenをレンダリングするために、`animation-did-mount`関数を追加する。
+6. アニメーション中にノードを更新するための `translate-y` 関数を追加する。
+7. `div` 要素をレンダリングする `animation` コンポーネントを作成します。
+8. `project.clj` に `mo .js` ライブラリを使用して、externsを追加します。
 
 #### Step 1: Create a new project
 
@@ -87,7 +87,7 @@ body {
 
 #### Step 7: Create an `animation` component that will render a `div` element
 
-The component will call the external Js code when the node is mounted in the browser DOM. This has to be done in the `component-did-mount` state.
+コンポーネントは、ブラウザのDOMにノードがマウントされると、外部のJsコードを呼び出します。これは、`component-did-mount`の状態で行う必要があります。
 
 ```clojure
 (defn animation []
@@ -102,7 +102,7 @@ The component will call the external Js code when the node is mounted in the bro
 
 #### Step 8: Add externs
 
-For advanced compilation, we need to protect `mojs` namespaced functions from getting renamed. We'll open `project.clj` and add a reference to the externs in the compiler portion under the  `:cljsbuild` key. The `:closure-warnings` key will suppress the warnings when parsing externs from the library.
+高度なコンパイルのためには、`mojs` の名前空間化された関数がリネームされないように保護する必要があります。`project.clj` を開いて、コンパイラ部分の `:cljsbuild` キーの下に、エクスターンへの参照を追加します。また、`:closure-warnings`キーで、ライブラリからのエクスターンを解析する際の警告を抑制します。
 
 ```clojure
 :externs ["resources/public/vendor/js/mo.min.js"]
@@ -112,7 +112,7 @@ For advanced compilation, we need to protect `mojs` namespaced functions from ge
 
 # Usage
 
-Compile cljs files.
+cljsファイルをコンパイルします。
 
 ```
 $ lein clean
