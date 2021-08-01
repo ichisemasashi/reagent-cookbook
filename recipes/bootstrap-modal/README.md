@@ -1,20 +1,20 @@
-# Problem
+#  問題
 
-You want to add a [modal window](http://getbootstrap.com/javascript/) to your [reagent](https://github.com/reagent-project/reagent) webapp.
+[試薬](https://github.com/reagent-project/reagent)のウェブアプリに、[モーダルウィンドウ](http://getbootstrap.com/javascript/)を追加したい。
 
-# Solution
+# 解決策
 
-We are going to use the [reagent-modals](https://github.com/Frozenlock/reagent-modals) library.
+[reagent-modals](https://github.com/Frozenlock/reagent-modals)というライブラリを使います。
 
-*Steps*
+*ステップ*
 
-1. Create a new project
-2. Add necessary items to `resources/public/index.html`
-3. Add reagent-modals to `project.clj`
-4. Add reagent-modals to `src/cljs/bootstrap_modal/core.cljs` namespace
-5. Add modal-window to `home`
-6. Create a button to bring up the modal window
-7. Add `modal-window-button` to `home`
+1. 新しいプロジェクトを作成します。
+2. 必要な項目を `resources/public/index.html` に追加します。
+3. `project.clj` に reagent-modals を追加する。
+4. 名前空間 `src/cljs/bootstrap_modal/core.cljs` に reagent-modals を追加する。
+5. `home` にモーダルウィンドウを追加する。
+6. モーダルウィンドウを表示するボタンを作成する
+7. `home` に `modal-window-button` を追加する。
 
 #### Step 1: Create a new project
 
@@ -46,7 +46,7 @@ $ lein new rc bootstrap-modal
 
 #### Step 3: Add reagent-modals to `project.clj`
 
-Add the following to the `:dependencies` vector.
+以下を `:dependencies` ベクターに追加します。
 
 ```clojure
 [org.clojars.frozenlock/reagent-modals "0.2.3"]
@@ -91,11 +91,11 @@ Add the following to the `:dependencies` vector.
 
 # Usage
 
-Compile cljs files.
+cljsファイルをコンパイルします。
 
 ```
 $ lein clean
 $ lein cljsbuild once prod
 ```
 
-Open `resources/public/index.html`.
+`resources/public/index.html`を開きます。
