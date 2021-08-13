@@ -1,22 +1,19 @@
-# Problem
+#  問題
 
-You want a canvas that fills a div in at least one dimension,
-as the browser window is resized.
+ブラウザのウィンドウサイズが変更されても、少なくとも一次元的にdivを埋めるキャンバスが欲しい。
 
-# Solution
+# 解決策
 
-We are going to use `create-class` and a Reagent `atom` to listen for
-events necessary to ensure that the canvas within a div fills the
-containing div. As the window changes size, 
+`create-class`とReagent `atom`を使って、div内のcanvasが包含するdivを確実に埋めるために必要なイベントをリッスンしてみましょう。ウィンドウのサイズが変わると 
 
-*Steps*
+*ステップ*
 
-1. Create a new project
-2. Add CSS to `resources/public/index.html`
-3. Add an atom and event handler for tracking the size of the window
-4. Create a `div-with-canvas` component
-5. Create a function to draw the contents of the canvas
-6. Refer to the `div-with-canvas` component in the `home` definition.
+1. 新しいプロジェクトを作成する
+2. CSSを `resources/public/index.html` に追加する。
+3. ウィンドウのサイズをトラッキングするためのアトムとイベントハンドラを追加する
+4. コンポーネント `div-with-canvas` を作成する。
+5. キャンバスの内容を描画する関数を作成します。
+6. `home` の定義で `div-with-canvas` コンポーネントを参照する。
 
 #### Step 1: Create a new project
 
@@ -26,10 +23,7 @@ $ lein new rc canvas-fills-div
 
 #### Step 2: Add CSS to `resources/public/index.html`
 
-Add some simple css styling to get a div that fills the window. Most
-of this is here to ensure that the `with-canvas` div fills all
-available vertical space. If all you need is a div/canvas that fills
-the width, all but the `display: block` can be removed.
+簡単な CSS スタイルを追加して、ウィンドウを埋める div を作成します。このスタイルのほとんどは、`with-canvas` の div が利用可能なすべての垂直方向のスペースを満たすようにするためのものです。幅いっぱいの div/canvas が必要なだけであれば、`display: block` 以外はすべて削除できます。
 
 
 ```html
@@ -60,27 +54,22 @@ the width, all but the `display: block` can be removed.
 </head>
 ```
 
-#### Step 3: Add an atom and event handler for tracking the size of the window
+#### Step 3: ウィンドウのサイズを追跡するためのアトムとイベントハンドラの追加
 
-Define a Reagent atom to track the current width of the window.  The
-canvas component will refer to this atom so that it's re-rendered as the
-window size changes.
+ウィンドウの現在の幅を追跡するために、Reagentアトムを定義します。 キャンバスコンポーネントはこのアトムを参照し、ウィンドウのサイズが変わると再レンダリングされるようにします。
 
 ```clojure
 (def window-width (reagent/atom nil))
 ```
 
-Define an event handler to update `window-width` when the window
-resizes. The size of the canvas is taken from the enclosing div, so
-the main point of this is that the atom is updated rather than the
-specific value.
+ウィンドウのサイズが変更されたときに `window-width` を更新するイベント ハンドラを定義します。キャンバスのサイズは囲んでいる div から取得しているので、特定の値ではなくアトムが更新されるのがポイントです。
 
 ```clojure
 (defn on-window-resize [ evt ]
   (reset! window-width (.-innerWidth js/window)))
 ```
 
-Add `on-window-resize` as a window event listener for resize events.
+リサイズイベントのウィンドウイベントリスナーとして、`on-window-resize`を追加しました。
 
 ```clojure
 (defn ^:export main []
@@ -91,10 +80,7 @@ Add `on-window-resize` as a window event listener for resize events.
 
 #### Step 4: Create a `div-with-canvas` component
 
-Navigate to `src/cljs/div_fills_canvasc/core.cljs`. This uses
-`create-class` because we need to capture the DOM node at the time the
-component is mounted as well as render into the canvas when the
-component updates.
+`src/cljs/div_fills_canvasc/core.cljs` に移動します。これは、コンポーネントがマウントされた時点でDOMノードをキャプチャし、コンポーネントが更新されたときにキャンバスにレンダリングする必要があるため、`creat-class`を使用しています。
 
 ```clojure
 (defn div-with-canvas [ ]
@@ -120,7 +106,7 @@ component updates.
                      :height (.-clientHeight node)})]])})))
 ```
 
-#### Step 5: Create a function to draw the contents of the canvas
+#### Step 5: キャンバスの内容を描画する関数を作成する
 
 ```clojure
 (defn draw-canvas-contents [ canvas ]
@@ -135,7 +121,7 @@ component updates.
     (.stroke ctx)))
 ```
 
-#### Step 6: Refer to the `div-with-canvas` component in the `home` definition.
+#### Step 6: `home`の定義にある`div-with-canvas`コンポーネントを参照してください。
 
 ```clojure
 (defn home []
